@@ -1,0 +1,31 @@
+﻿@page
+@model FizzBuzz.Pages.CustomNumbers.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>CustomNumber</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomNumber.number)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CustomNumber.number)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CustomNumber.value)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CustomNumber.value)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.CustomNumber.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

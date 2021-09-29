@@ -17,7 +17,7 @@ It then displays this data on a webpage Using the Razor Pages framework.
 3. Then navigate to the root folder, `FizzBuzz` and open it.
 4. Select and open the solution file, `FizzBuzz.sln`.
 5. On the right, in the solution explorer, navigate to the packages inside the dependecies for the project and ensure you have all of them installed and up to date
-6. Once installed, press F5 to run the solution or click on `IIS Express` next to the green play button on top
+6. Once installed, press `Ctrl+F5` to run the solution without debugger or click on `IIS Express` next to the green play button on top
 7. A webpage will open up, navigate to the `Custom Numbers` tab using the navigation bar to view all the customised numbers
 
 

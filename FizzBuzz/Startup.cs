@@ -56,6 +56,7 @@ namespace FizzBuzz
             {
                 endpoints.MapRazorPages();
             });
+
         }
     }
 }

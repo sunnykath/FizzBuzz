@@ -5,9 +5,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
+using FizzBuzz.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace FizzBuzz
 {
@@ -23,6 +25,12 @@ namespace FizzBuzz
 
                 try
                 {
+                    var context = new FizzBuzzContext(
+                        services.GetRequiredService<
+                        DbContextOptions<FizzBuzzContext>>()
+                        );
+                    //context.Database.EnsureDeleted();
+                    context.Database.EnsureCreated();
                     SeedData.Initialize(services);
                 }
                 catch (Exception ex)
